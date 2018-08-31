@@ -20,7 +20,7 @@ contract Election {
     }
 
     function addCandidate (string _name) private {
-        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
         candidatesCount++;
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
 }
