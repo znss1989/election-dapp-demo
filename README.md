@@ -1,7 +1,7 @@
 # Election demo Dapp
 
 ## Usage
-### Deploy and test
+### Deploy and test contract
 1. Launch ganache desktop or ganache-cli by `node_modules/.bin/ganache-cli`
 2. Deploy the contract to the local blockchain network by `truffle migrate` or `truffle migrate --reset`
 3. Test the contract by `truffle test`, which uses `test/election.js`

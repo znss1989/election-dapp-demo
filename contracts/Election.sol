@@ -7,6 +7,10 @@ contract Election {
         string name;
         uint voteCount;
     }
+
+    event votedEvent (
+      uint indexed _candidateId
+    );
     mapping(uint => Candidate) public candidates; // read/write candidates
     mapping(address => bool) public voters; // store accounts that have voted
     uint public candidatesCount;
@@ -27,5 +31,7 @@ contract Election {
 
         voters[msg.sender] = true;
         candidates[_candidateId].voteCount++;
+
+        votedEvent(_candidateId); // trigger voted event
     }
 }
